@@ -1,13 +1,12 @@
 class Solution {
 public:
     bool isValid(string s) {
-        stack<char>st;
-        for(char i : s){
-            if((i=='(') || (i=='{') || (i=='[')){
+        stack<char> st;
+        for (char i : s) {
+            if ((i == '(') || (i == '{') || (i == '[')) {
                 st.push(i);
-            }
-            else{
-                                if (st.empty()) {
+            } else {
+                if (st.empty()) {
                     return false;
                 }
 
@@ -19,13 +18,11 @@ public:
                     return false;
                 }
             }
-
-            }
-        
-        if(st.empty()){
-            return true;
         }
-        else{
+
+        if (st.empty()) {
+            return true;
+        } else {
             return false;
         }
     }
