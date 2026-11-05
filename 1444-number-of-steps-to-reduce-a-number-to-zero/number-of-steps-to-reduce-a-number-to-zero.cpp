@@ -8,7 +8,7 @@ public:
                 count++;
             }
             else{
-                num=num-1;
+                num--;
                 count++;
             }
         }
