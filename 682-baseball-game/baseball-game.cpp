@@ -1,16 +1,12 @@
 class Solution {
 public:
     int calPoints(vector<string>& operations) {
-        
         stack<int>stk;
         for(string i : operations){
-            
            if (i == "+") {
                 int first = stk.top();
                 stk.pop();
-
                 int second = stk.top();
-
                 stk.push(first);         
                 stk.push(first + second);
 
